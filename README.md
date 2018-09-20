@@ -2,7 +2,7 @@
 A typescript, create-react-app based electron project based on ideas in [From React to an Electron app ready for production](https://medium.com/@kitze/%EF%B8%8F-from-react-to-an-electron-app-ready-for-production-a0468ecb1da3).
 
 # Notes
-Project is first bootstrapped using cra as outlined in the Microsoft cra starter ([here](https://github.com/Microsoft/TypeScript-React-Starter)).
+Project is first bootstrapped using cra as outlined in the Microsoft cra starter [here](https://github.com/Microsoft/TypeScript-React-Starter).
 
 Then electron tools and libraries are added.
 ```

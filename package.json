@@ -1,0 +1,48 @@
+{
+  "name": "cra-electron-app",
+  "version": "0.1.0",
+  "author": "Matt Styles",
+  "description": "Example of using create-react-app and typescript to create an electron app",
+  "private": true,
+  "main": "build/electron/electron.js",
+  "homepage": "./",
+  "build": {
+    "appId": "com.compiledcreations.cra-electron-app",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "dependencies": {
+    "electron-is-dev": "^1.0.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts-ts": "2.17.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "electron:build": "tsc -p tsconfig.electron.json",
+    "electron:start": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron ./build/electron/electron.js\"",
+    "electron:pack": "build",
+    "preelectron:pack": "npm run build && npm run electron:build",
+    "preelectron:start": "npm run electron:build"
+  },
+  "devDependencies": {
+    "@types/electron-is-dev": "^0.3.0",
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.10.1",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "concurrently": "^4.0.1",
+    "electron": "^3.0.0",
+    "electron-builder": "^20.28.4",
+    "typescript": "^3.0.3",
+    "wait-on": "^3.0.1"
+  }
+}

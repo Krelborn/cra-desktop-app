@@ -1,3 +1,11 @@
+//
+// index.ts
+//
+// Entry point for the Electron main process
+//
+// Creates the browser window and sets up some event handlers.
+//
+
 import { app, BrowserWindow } from "electron";
 import * as isDev from "electron-is-dev";
 import * as path from "path";

@@ -4,7 +4,7 @@
   "author": "Matt Styles",
   "description": "Example of using create-react-app and typescript to create an electron app",
   "private": true,
-  "main": "build/electron/electron.js",
+  "main": "build/electron/index.js",
   "homepage": "./",
   "build": {
     "appId": "com.compiledcreations.cra-electron-app",
@@ -18,9 +18,12 @@
   },
   "dependencies": {
     "electron-is-dev": "^1.0.1",
+    "inversify": "^4.13.0",
+    "inversify-inject-decorators": "^3.1.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts-ts": "2.17.0"
+    "react-scripts-ts": "2.17.0",
+    "reflect-metadata": "^0.1.12"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -28,7 +31,7 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "electron:build": "tsc -p tsconfig.electron.json",
-    "electron:start": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron ./build/electron/electron.js\"",
+    "electron:start": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron ./build/electron/index.js\"",
     "electron:pack": "build",
     "preelectron:pack": "npm run build && npm run electron:build",
     "preelectron:start": "npm run electron:build"

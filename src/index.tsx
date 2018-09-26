@@ -1,8 +1,6 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import App from "./App";
-import "./index.css";
-import registerServiceWorker from "./registerServiceWorker";
+//
+// This file is required as the entry point for react-scripts when performing the web build. It 
+// imports the index module from web, which is our real web entry point.
+//
 
-ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
-registerServiceWorker();
+import "./web/index";

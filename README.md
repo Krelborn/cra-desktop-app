@@ -31,6 +31,10 @@ electron sources during the react-scripts build.
 Finally a preload script is added to the electron sources which can be used to inject things from 
 the electron code into the render process.
 
+We use [InversifyJS](http://inversify.io/) to perform dependency injection using an IoC container.
+This allows the electron side of the application to modify the runtime behaviour of the React 
+application during the execution of the application window.
+
 # MIT License
 Copyright (c) 2017 Compiled Creations Limited
 
